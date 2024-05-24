@@ -21,3 +21,26 @@ for (let i = 0; i < row2.length; i++) {
 }
 
 console.log(newArr)
+
+
+//Part 3
+// For each row of data in the result array produced by your code above, create an object where the key of each value is the heading for that value’s column.
+// Convert these keys to all lowercase letters for consistency.
+// Store these objects in an array, in the order that they were originally listed.
+// Since the heading for each column will be stored in the object keys, you do not need to create an object for the heading row itself.
+
+let header = newArr[0].map(header => header.toLowerCase());
+
+objectArr = []
+for (let i = 1; i < newArr.length; i++) {
+  let objRow = {};
+  for (let y = 0; y < header.length; y++) {
+    objRow[header[y]] = newArr[i][y];
+  }
+  objectArr.push(objRow);
+}
+
+console.log(objectArr)
+
+
+//part 4
