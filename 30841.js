@@ -44,3 +44,26 @@ console.log(objectArr)
 
 
 //part 4
+// remove last entry
+objectArr.pop();
+//insert this into arr
+// { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+
+objectArr.splice(1, 0, {id: "48", name: "Barry", occupation: "Runner", age: "25"})
+objectArr.push({id: "7", name: "Bilbo", occupation: "None", age: "111"})
+
+console.log(objectArr)
+
+//calculate average age of people
+let totalAge = 0;
+
+for (let i = 0; i < objectArr.length; i++) {
+  let age = parseInt(objectArr[i]['age'])
+  totalAge += age
+}
+
+//let avgAge = totalAge / 5;
+//console.log(objectArr.length)
+
+let avgAge = totalAge / objectArr.length
+console.log(avgAge)
