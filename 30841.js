@@ -67,3 +67,24 @@ for (let i = 0; i < objectArr.length; i++) {
 
 let avgAge = totalAge / objectArr.length
 console.log(avgAge)
+
+/// Part 5 
+// Turn back into csv format 
+
+
+let csv = ''
+
+for (let i = 0; i < objectArr.length; i++){ 
+  let row = '';
+  for (let key in objectArr[i]) {
+    row += objectArr[i][key] + ',';
+  } 
+  csv += row
+}
+
+console.log(csv)
+
+
+
+
+//  node 30841
